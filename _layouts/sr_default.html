@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include /sr_data/head.html %}
+
+
+    <body id="page-top" class="index">
+
+    {% include /sr_data/header.html %}
+    {% include /sr_data/events.html %}
+    {% include /sr_data/venue.html %}
+    {% include /sr_data/travel.html %}
+    {% include /sr_data/stay.html %}
+    {% include /sr_data/things_to_do.html %}
+    {% include /sr_data/our_story.html %}
+    {% include /sr_data/bridal_party.html %}
+    {% include /sr_data/FAQ.html %}
+    {% include /sr_data/contact.html %}
+    {% include /sr_data/footer.html %}
+    {% include /sr_data/modals.html %}
+    {% include /sr_data/js.html %}
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+
+    </body>
+</html>
