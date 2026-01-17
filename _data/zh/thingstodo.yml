@@ -1,0 +1,58 @@
+- modal-id: 1
+  title: "Petrovaradin Fortress"
+  subtitle: "Iconic views over the Danube"
+  thumbnail: "petrovaradin-thumb.JPG"
+  img: "petrovaradin.jpeg"
+  alt: "Petrovaradin Fortress, looking over Novi Sad and the Danube"
+  description: "The must-see landmark right by the venue. Wander the fortress paths and viewpoints—sunset is especially beautiful."
+  link: "https://maps.app.goo.gl/b3RKMAF11zhe161cA"
+
+- modal-id: 2
+  title: "Novi Sad Old Town (Stari Grad)"
+  subtitle: "Cafés, architecture, and easy strolling"
+  thumbnail: "starigrad-thumb.jpg"
+  img: "starigrad.jpg"
+  alt: "Pedestrian area in Novi Sad city center"
+  description: "Great for coffee, dinner, and a relaxed walk through the pedestrian streets and main square."
+  link: "https://maps.app.goo.gl/Syw355QH5NDgSusA6"
+  
+
+- modal-id: 3
+  title: "Danube Promenade"
+  subtitle: "Riverside walk near the bridges"
+  thumbnail: "kej-thumb.jpg"
+  img: "kej.jpg"
+  alt: "Danube riverside walkway in Novi Sad"
+  description: "A simple, scenic stroll along the river. Perfect if you want something low-key between wedding events."
+  link: "https://maps.app.goo.gl/n7pPiM3DEdT2KY8r8"
+  
+
+- modal-id: 4
+  title: "Štrand Beach"
+  subtitle: "Classic summer spot on the river"
+  thumbnail: "strand-thumb.jpg"
+  img: "strand.jpg"
+  alt: "Strand beach area on the Danube"
+  description: "Štrand is the local favorite for sun and casual food by the water. It is not recommended to swim in the water."
+  link: "https://maps.app.goo.gl/uTbR3w5DGLDNryzDA"
+  
+
+- modal-id: 5
+  title: "Fruška Gora"
+  subtitle: "Nature, viewpoints, and wineries nearby"
+  thumbnail: "fruskagora-thumb.jpg"
+  img: "fruskagora.jpg"
+  alt: "Landscape in Fruška Gora"
+  description: "A great half-day trip for fresh air and views. There are easy walks as well as longer hikes, plus wineries in the area."
+  link: "https://maps.app.goo.gl/wZHbBuV3jhjVszPE7"
+  
+
+- modal-id: 6
+  title: "Sremski Karlovci"
+  subtitle: "Charming town & wine tasting"
+  thumbnail: "karlovaci-thumb.jpg"
+  img: "karlovaci.jpg"
+  alt: "Town center in Sremski Karlovci"
+  description: "A picturesque nearby town known for wine and a lovely center—an easy outing if you’re extending your stay."
+  link: "https://maps.app.goo.gl/nJ2mxinBBTQi46ty9"
+  

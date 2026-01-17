@@ -1,5 +1,6 @@
 - modal-id: 1
   title: "Petrovaradin Fortress"
+  slug: "fortress"
   subtitle: "Iconic views over the Danube"
   thumbnail: "petrovaradin-thumb.JPG"
   img: "petrovaradin.jpeg"
@@ -9,9 +10,10 @@
 
 - modal-id: 2
   title: "Novi Sad Old Town (Stari Grad)"
+  slug: "town"
   subtitle: "Cafés, architecture, and easy strolling"
-  thumbnail: "starigrad-thumb.jpeg"
-  img: "starigrad.jpeg"
+  thumbnail: "starigrad-thumb.jpg"
+  img: "starigrad.jpg"
   alt: "Pedestrian area in Novi Sad city center"
   description: "Great for coffee, dinner, and a relaxed walk through the pedestrian streets and main square."
   link: "https://maps.app.goo.gl/Syw355QH5NDgSusA6"
@@ -19,6 +21,7 @@
 
 - modal-id: 3
   title: "Danube Promenade"
+  slug: "danube"
   subtitle: "Riverside walk near the bridges"
   thumbnail: "kej-thumb.jpg"
   img: "kej.jpg"
@@ -29,6 +32,7 @@
 
 - modal-id: 4
   title: "Štrand Beach"
+  slug: "beach"
   subtitle: "Classic summer spot on the river"
   thumbnail: "strand-thumb.jpg"
   img: "strand.jpg"
@@ -39,9 +43,10 @@
 
 - modal-id: 5
   title: "Fruška Gora"
+  slug: "fruskagora"
   subtitle: "Nature, viewpoints, and wineries nearby"
-  thumbnail: "fruska-thumb.jpg"
-  img: "fruska-gora.jpg"
+  thumbnail: "fruskagora-thumb.jpg"
+  img: "fruskagora.jpg"
   alt: "Landscape in Fruška Gora"
   description: "A great half-day trip for fresh air and views. There are easy walks as well as longer hikes, plus wineries in the area."
   link: "https://maps.app.goo.gl/wZHbBuV3jhjVszPE7"
@@ -49,9 +54,10 @@
 
 - modal-id: 6
   title: "Sremski Karlovci"
+  slug: "karlovaci"
   subtitle: "Charming town & wine tasting"
-  thumbnail: "karlovci-thumb.jpg"
-  img: "karlovci.jpg"
+  thumbnail: "karlovaci-thumb.jpg"
+  img: "karlovaci.jpg"
   alt: "Town center in Sremski Karlovci"
   description: "A picturesque nearby town known for wine and a lovely center—an easy outing if you’re extending your stay."
   link: "https://maps.app.goo.gl/nJ2mxinBBTQi46ty9"
