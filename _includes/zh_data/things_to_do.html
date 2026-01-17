@@ -1,29 +1,84 @@
 <!-- Things To Do Section -->
 <section id="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Things To Do</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat sapien sem, id dignissim est pellentesque eu. Etiam eget ligula fermentum, convallis odio vel, sodales metus. Proin odio arcu, tincidunt.</h3>
-            </div>
-        </div>
-        <div class="row">
-        {% for post in site.data.en.thingstodo %}
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/wedding-template/img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>{{ post.title }}</h4>
-                    <p class="text-muted">{{ post.subtitle }}</p>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Things To Do</h2>
+        <h3 class="section-subheading text-muted">
+          If you’re making a trip out of it, here are a few easy favorites around Novi Sad.
+        </h3>
+      </div>
     </div>
+
+    <div class="portfolio-grid">
+    {% for post in site.data.en.thingstodo %}
+      {% assign modal_slug = post.slug | default: post.title %}
+      <div class="portfolio-item">
+        <!-- Keep modal zoom behavior, but use a human-readable anchor -->
+        <a href="#ttd-{{ modal_slug | slugify }}" class="portfolio-link" data-toggle="modal">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fa fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{ '/img/portfolio/' | append: post.thumbnail | relative_url }}"
+               class="img-responsive img-centered" alt="{{ post.alt }}">
+        </a>
+        <div class="portfolio-caption">
+          <h4>{{ post.title }}</h4>
+          <p class="text-muted">{{ post.subtitle }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+  </div>
 </section>
+
+<!-- Modals (zoomed-in view + maps link) -->
+{% for post in site.data.en.thingstodo %}
+  {% assign modal_slug = post.slug | default: post.title %}
+  <div class="portfolio-modal modal fade" id="ttd-{{ modal_slug | slugify }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr"><div class="rl"></div></div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>{{ post.title }}</h2>
+              <p class="item-intro text-muted">{{ post.subtitle }}</p>
+
+              <img class="img-responsive img-centered"
+                   src="{{ '/img/portfolio/' | append: post.img | relative_url }}"
+                   alt="{{ post.alt }}">
+
+              <!-- Alt text -->
+              <p class="text-muted">{{ post.alt }}</p>
+
+              <!-- Google Maps link (below alt text) -->
+              {% if post.link %}
+                <p>
+                  <a href="{{ post.link }}" target="_blank" rel="noopener">
+                    Open in Google Maps
+                  </a>
+                </p>
+              {% endif %}
+
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                <i class="fa fa-times"></i> Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endfor %}

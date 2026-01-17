@@ -1,35 +1,49 @@
 <head>
-    <!-- For Google Indexing - you can delete this -->
-    <link rel="canonical" href="https://alicelepissier.com/wedding-template/fr">
-    
+    <!-- Canonical URL (SEO-safe for GitHub Pages & custom domains) -->
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/en">
+
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/wedding-template/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/wedding-template/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/wedding-template/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/wedding-template/img/favicon/site.webmanifest">
+    <link rel="icon" sizes="96x96" type="image/png" 
+          href="{{ site.baseurl }}/img/favicon/favicon-96x96.png">
+    <link rel="icon" sizes="96x96" type="image/svg+xml"
+          href="{{ site.baseurl }}/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest"
+          href="{{ site.baseurl }}/img/favicon/site.webmanifest">
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- Canonical per-page URL -->
+    <link rel="canonical"
+          href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+    <!-- Custom CSS & Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ "/css/font-awesome/css/all.css" | prepend: site.baseurl }}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,100,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ "/css/webfontkit-StayClassy/stylesheet.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,100,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+          href="{{ site.baseurl }}/css/webfontkit-StayClassy/stylesheet.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 Shim and Respond.js IE8 support -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
