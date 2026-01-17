@@ -3,15 +3,15 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Things To Do</h2>
+        <h2 class="section-heading">可以做的事情</h2>
         <h3 class="section-subheading text-muted">
-          If you’re making a trip out of it, here are a few easy favorites around Novi Sad.
+          如果你打算去诺维萨德旅行，以下是一些周边地区比较受欢迎的景点。
         </h3>
       </div>
     </div>
 
     <div class="portfolio-grid">
-    {% for post in site.data.en.thingstodo %}
+    {% for post in site.data.zh.thingstodo %}
       {% assign modal_slug = post.slug | default: post.title %}
       <div class="portfolio-item">
         <!-- Keep modal zoom behavior, but use a human-readable anchor -->
@@ -36,7 +36,7 @@
 </section>
 
 <!-- Modals (zoomed-in view + maps link) -->
-{% for post in site.data.en.thingstodo %}
+{% for post in site.data.zh.thingstodo %}
   {% assign modal_slug = post.slug | default: post.title %}
   <div class="portfolio-modal modal fade" id="ttd-{{ modal_slug | slugify }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
@@ -58,14 +58,24 @@
               <!-- Alt text -->
               <p class="text-muted">{{ post.alt }}</p>
 
-              <!-- Google Maps link (below alt text) -->
-              {% if post.link %}
-                <p>
-                  <a href="{{ post.link }}" target="_blank" rel="noopener">
-                    Open in Google Maps
+              <!-- Map links (below alt text) -->
+              <p>
+                {% if post.link_cn %}
+                  <a href="{{ post.link_cn }}" target="_blank" rel="noopener">
+                    在百度地图中打开（中国大陆可用）
                   </a>
-                </p>
-              {% endif %}
+                {% endif %}
+
+                {% if post.link_cn and post.link %}
+                  <span class="text-muted"> · </span>
+                {% endif %}
+
+                {% if post.link %}
+                  <a href="{{ post.link }}" target="_blank" rel="noopener">
+                    在 Google 地图中打开
+                  </a>
+                {% endif %}
+              </p>
 
               {% if post.description %}
                 <p>{{ post.description }}</p>

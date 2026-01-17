@@ -308,7 +308,7 @@ fieldset[disabled] .btn-m.active {
     /*font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;*/
     font-family: "stay_classy_sldtregular","Helvetica Neue",Helvetica,Arial,cursive;
     color: #{{ site.data.template.color.primary }};
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .brand {
@@ -783,13 +783,12 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/backgrounds/adriatic.jpg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: #222;
+  background-image: url('{{ site.baseurl }}/img/backgrounds/adriatic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 section#contact .section-heading {
     color: #fff;
 }
@@ -991,4 +990,60 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+}
+
+/* Lightbox overlay */
+.story-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+}
+
+.story-lightbox.is-open {
+  display: flex;
+}
+
+.story-lightbox-inner {
+  max-width: min(1000px, 95vw);
+  max-height: 90vh;
+  text-align: center;
+}
+
+.story-lightbox img {
+  max-width: 100%;
+  max-height: 78vh;
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+}
+
+.story-lightbox-caption {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Close button */
+.story-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 40px;
+  line-height: 1;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.story-lightbox-close:focus {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
 }

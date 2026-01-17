@@ -3,58 +3,130 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Photo Highlights</h2>
+        <h2 class="section-heading">照片精选</h2>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <p class="largepad text-muted">
-          Not a “how we met” novel—just a greatest-hits reel. 📸
-          A few favorite moments, trips, and good times leading up to the big day.
-        </p>
-        <p class="text-muted" style="margin-top:-10px;">
-          <em>(More context available on request. 😉)</em>
+          过去几年里的一些旅行和日常瞬间。如果你看到喜欢的照片，欢迎来问我们背后的故事。
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Keep your existing responsive gallery -->
+  <!-- Responsive gallery -->
   <div class="rowstory">
     <div class="columnstory">
-      <img src="{{ '/img/story/opera.jpg' | relative_url }}" alt="At the Opera in Salzburg">
-      <img src="{{ '/img/story/karaoke.jpg' | relative_url }}" alt="New 2023 Karaoke Year">
-      <img src="{{ '/img/story/montmartre.jpg' | relative_url }}" alt="Passing by Montmartre">
-      <img src="{{ '/img/story/sunglasses.jpg' | relative_url }}" alt="Shopping for sunglasses">
-      <img src="{{ '/img/story/danicabday.jpg' | relative_url }}" alt="Danica's birthday in Split">
-      
+
+      <a href="{{ '/img/story/opera.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/opera.jpg' | relative_url }}" alt="在萨尔茨堡歌剧院的夜晚" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/karaoke.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/karaoke.jpg' | relative_url }}" alt="2023年跨年夜的卡拉OK时刻" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/montmartre.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/montmartre.jpg' | relative_url }}" alt="路过巴黎蒙马特高地" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/sunglasses.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/sunglasses.jpg' | relative_url }}" alt="一起挑选太阳镜" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/danicabday.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/danicabday.jpg' | relative_url }}" alt="在斯普利特庆祝 Danica 的生日" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
     </div>
 
     <div class="columnstory">
-    <img src="{{ '/img/story/hvar.jpg' | relative_url }}" alt="Petar Hektorovic house in Hvar">
-      <img src="{{ '/img/story/konstanz.jpg' | relative_url }}" alt="Konstanz bike tour">
-      <img src="{{ '/img/story/dino.jpg' | relative_url }}" alt="Jurassic park minigolf">
-      <img src="{{ '/img/story/stadtfest.jpg' | relative_url }}" alt="Tübingen Stadtfest">
-      <img src="{{ '/img/story/heart.jpg' | relative_url }}" alt="Krk">
-       
-     
+
+      <a href="{{ '/img/story/hvar.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/hvar.jpg' | relative_url }}" alt="赫瓦尔岛上的彼得·赫克托罗维奇故居" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/konstanz.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/konstanz.jpg' | relative_url }}" alt="在康斯坦茨的骑行之旅" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/dino.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/dino.jpg' | relative_url }}" alt="侏罗纪主题迷你高尔夫" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/stadtfest.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/stadtfest.jpg' | relative_url }}" alt="蒂宾根城市节庆现场" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/heart.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/heart.jpg' | relative_url }}" alt="在克尔克岛的一个温柔瞬间" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
     </div>
 
     <div class="columnstory">
-      <img src="{{ '/img/story/charleyportrait.jpg' | relative_url }}" alt="Danica painted me to look like Harry Potter">
-      <img src="{{ '/img/story/danicaportrait.jpg' | relative_url }}" alt="Charley painted me to look like Gollum">
-      <img src="{{ '/img/story/niagarafalls.jpg' | relative_url }}" alt="Niagara falls">
-      <img src="{{ '/img/story/acoruna.jpg' | relative_url }}" alt="Á Coruña">
-      
+
+      <a href="{{ '/img/story/charleyportrait.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/charleyportrait.jpg' | relative_url }}" alt="Danica 把我画成了哈利·波特" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/danicaportrait.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/danicaportrait.jpg' | relative_url }}" alt="Charley 把我画成了咕噜" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/niagarafalls.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/niagarafalls.jpg' | relative_url }}" alt="尼亚加拉瀑布" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/acoruna.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/acoruna.jpg' | relative_url }}" alt="西班牙拉科鲁尼亚" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
     </div>
 
     <div class="columnstory">
-      <img src="{{ '/img/story/rijeka.jpg' | relative_url }}" alt="A toast to D+L">
-      <img src="{{ '/img/story/bubbles.jpg' | relative_url }}" alt="Bubbles">
-      <img src="{{ '/img/story/shibuya.jpg' | relative_url }}" alt="Busy Shibuya in Tokyo">
-      <img src="{{ '/img/story/fish.jpg' | relative_url }}" alt="Taiyaki kiss">
-      <img src="{{ '/img/story/paris.jpg' | relative_url }}" alt="We're getting married!">
+
+      <a href="{{ '/img/story/rijeka.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/rijeka.jpg' | relative_url }}" alt="为我们举杯庆祝的一刻" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/bubbles.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/bubbles.jpg' | relative_url }}" alt="泡泡飞舞的瞬间" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/shibuya.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/shibuya.jpg' | relative_url }}" alt="东京涩谷的繁忙街头" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/fish.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/fish.jpg' | relative_url }}" alt="分享鲷鱼烧的一吻" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
+      <a href="{{ '/img/story/paris.jpg' | relative_url }}" class="story-photo-link">
+        <img src="{{ '/img/story/paris.jpg' | relative_url }}" alt="我们要结婚了！" loading="lazy" decoding="async">
+        <span class="sr-only">打开大图查看</span>
+      </a>
+
     </div>
   </div>
 </section>

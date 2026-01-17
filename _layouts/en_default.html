@@ -3,7 +3,70 @@
 
   {% include /en_data/head.html %}
 
+    <!-- Story Lightbox (add once near the end of the page) -->
+    <div id="storyLightbox" class="story-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+      <button type="button" class="story-lightbox-close" aria-label="Close photo viewer">&times;</button>
+      <div class="story-lightbox-inner" role="document">
+        <img id="storyLightboxImg" alt="">
+        <div id="storyLightboxCaption" class="story-lightbox-caption"></div>
+      </div>
+    </div>
 
+    
+<script>
+  (function () {
+    var lightbox = document.getElementById('storyLightbox');
+    var imgEl = document.getElementById('storyLightboxImg');
+    var captionEl = document.getElementById('storyLightboxCaption');
+    var closeBtn = lightbox.querySelector('.story-lightbox-close');
+
+    function openLightbox(src, alt) {
+      imgEl.src = src;
+      imgEl.alt = alt || '';
+      captionEl.textContent = alt || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      // prevent background scroll
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      imgEl.src = '';
+      captionEl.textContent = '';
+      document.body.style.overflow = '';
+    }
+
+    // Click on gallery images
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('.story-photo-link');
+      if (!link) return;
+
+      var img = link.querySelector('img');
+      if (!img) return;
+
+      e.preventDefault();
+      openLightbox(link.href, img.alt);
+    });
+
+    // Close button
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Click outside image closes (on the dark backdrop)
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Esc key closes
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
     <body id="page-top" class="index">
 
     {% include /en_data/header.html %}
